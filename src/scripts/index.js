@@ -33,12 +33,12 @@ function timeStamp() {
     return carpeDiem;
 }
 
-// IT_ Aggiunge altri contenuti se lo scroll supera quelli già presenti. || EN_ Adds more content if the scroll exceeds those already present.
+// IT_ Aggiunge altri contenuti se lo scroll supera quelli già presenti, fino a un massimo di 500.. || EN_ Adds more content if the scroll exceeds those already present, up to a maximum of 500.
 endlessList.addEventListener('scroll', function() {
     console.log("scrollTop", endlessList.scrollTop); // IT_ Quanto sto scorrendo l'elemento.
     console.log("clientHeight", endlessList.clientHeight); // IT_ Quanto è visibile in altezza dell'elemento.
     console.log("scrollHeight", endlessList.scrollHeight); // IT_ Quanto è alto l'elemento.
-    if (endlessList.scrollTop + endlessList.clientHeight >= endlessList.scrollHeight) {
+    if ((endlessList.scrollTop + endlessList.clientHeight >= endlessList.scrollHeight) && (unoMas <500)) {
         loadMas();
     }
 });
