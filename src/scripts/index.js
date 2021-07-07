@@ -22,6 +22,15 @@ function loadMas() {
         endlessList.appendChild(itemList);
         i++;
     }
+    endlessList.appendChild(timeStamp());
+}
+
+// IT_ Aggiunge una riga con il timestamp. || EN_ Add a row with the timestamp.
+function timeStamp() {
+    const carpeDiem = document.createElement('p');
+    carpeDiem.className = "time";
+    carpeDiem.appendChild(document.createTextNode("TIMESTAMP " + Date.now()));
+    return carpeDiem;
 }
 
 // IT_ Aggiunge altri contenuti se lo scroll supera quelli già presenti. || EN_ Adds more content if the scroll exceeds those already present.
